@@ -29,7 +29,7 @@ public class MyFileReader {
 			}
 			
 			outputContent = strBuilder.toString();
-			writer.write(outputContent);
+			writeFileContent(outputContent);
 		} catch(IOException e) {
 			e.printStackTrace();
 		} finally {
@@ -38,6 +38,10 @@ public class MyFileReader {
 		}
 		
 		return outputContent;
+	}
+
+	public void writeFileContent(String outputContent) throws IOException {
+		writer.write(outputContent);
 	}
 
 	public static void main(String[] args) throws IOException {
